@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkAdjustment" id="GWadj">
+    <property name="upper">9.90</property>
+    <property name="step-increment">0.10</property>
+    <property name="page-increment">10</property>
+    <signal name="value-changed" handler="on_GWadj_value_changed" swapped="no"/>
+  </object>
+  <object class="GtkAdjustment" id="GWadj2">
+    <property name="upper">9</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+    <signal name="value-changed" handler="on_GWadj2_value_changed" swapped="no"/>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkEntry" id="GWinum">
+            <property name="width-request">160</property>
+            <property name="height-request">36</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <signal name="changed" handler="on_GWinum_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">36</property>
+            <property name="y">46</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="GWlabel">
+            <property name="width-request">237</property>
+            <property name="height-request">36</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-right">1</property>
+            <property name="label" translatable="yes">"IMDB" + folder name   (for Cut&amp;Paste + Google Search)</property>
+            <property name="selectable">True</property>
+          </object>
+          <packing>
+            <property name="x">86</property>
+            <property name="y">95</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="GWunam">
+            <property name="width-request">516</property>
+            <property name="height-request">36</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <signal name="changed" handler="on_GWunam_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">36</property>
+            <property name="y">135</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFixed">
+            <property name="width-request">250</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">end</property>
+            <child>
+              <object class="GtkButton" id="GWok">
+                <property name="label" translatable="yes">OK</property>
+                <property name="width-request">91</property>
+                <property name="height-request">40</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="tooltip-text" translatable="yes">Click me!</property>
+                <signal name="clicked" handler="on_GWok_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="x">108</property>
+                <property name="y">50</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">458</property>
+            <property name="y">232</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScale" id="GWscale">
+            <property name="width-request">750</property>
+            <property name="height-request">48</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="adjustment">GWadj</property>
+            <property name="round-digits">1</property>
+            <property name="draw-value">False</property>
+          </object>
+          <packing>
+            <property name="x">20</property>
+            <property name="y">191</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="GWinam">
+            <property name="width-request">213</property>
+            <property name="height-request">35</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="x">219</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="GWPartWatched">
+            <property name="width-request">40</property>
+            <property name="height-request">18</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="margin-top">15</property>
+            <property name="adjustment">GWadj2</property>
+            <property name="climb-rate">1</property>
+            <property name="numeric">True</property>
+          </object>
+          <packing>
+            <property name="x">110</property>
+            <property name="y">270</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="GWwatchLabel">
+            <property name="width-request">100</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">PartWatched</property>
+            <property name="selectable">True</property>
+          </object>
+          <packing>
+            <property name="x">112</property>
+            <property name="y">258</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="GWcopy">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Copy to clipboard and run Google search</property>
+            <signal name="clicked" handler="on_GWcopy_clicked" swapped="no"/>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="x">36</property>
+            <property name="y">93</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
